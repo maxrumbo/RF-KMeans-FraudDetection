@@ -1,60 +1,60 @@
 # Machine Learning Clustering Classification
 
-Repository ini berisi proyek machine learning end-to-end yang berfokus pada dua task utama:
+This repository contains an end-to-end machine learning project focused on two main tasks:
 
-1. Clustering untuk segmentasi pola transaksi.
-2. Classification untuk memprediksi label target hasil clustering.
+1. Clustering for transaction pattern segmentation.
+2. Classification to predict target labels generated from clustering.
 
-Seluruh pipeline dikerjakan menggunakan Python di Jupyter Notebook, lalu model disimpan sebagai artefak untuk evaluasi dan reuse.
+The entire pipeline is implemented in Python using Jupyter Notebook, and the models are saved as artifacts for evaluation and reuse.
 
-## Tujuan Proyek
+## Project Goals
 
-- Membangun model clustering berbasis fitur transaksi.
-- Melakukan reduksi dimensi untuk analisis lanjutan.
-- Menghasilkan dataset turunan yang memiliki kolom Target.
-- Melatih model klasifikasi dari hasil clustering.
-- Melakukan eksplorasi model alternatif dan tuning hyperparameter.
+- Build a clustering model based on transaction features.
+- Apply dimensionality reduction for further analysis.
+- Generate a derived dataset that includes a Target column.
+- Train a classification model using clustering output.
+- Explore alternative models and perform hyperparameter tuning.
 
 ## Dataset
 
-Dataset utama terkait pola transaksi finansial dan digunakan untuk:
+The main dataset is related to financial transaction patterns and is used for:
 
-- Eksplorasi data.
+- Data exploration.
 - Feature preprocessing.
-- Pembentukan cluster.
-- Penyusunan dataset siap klasifikasi.
+- Cluster formation.
+- Preparing a classification-ready dataset.
 
-File dataset yang tersedia di repository:
+Available dataset files in this repository:
 
 - data_clustering.csv
 - data_clustering_inverse.csv
 
-## Struktur Project
+## Project Structure
 
 - [Clustering]_Submission_Akhir_BMLP_Your_Name.ipynb
-	Notebook untuk tahap clustering, termasuk preprocessing, pemodelan cluster, dan evaluasi.
+	Notebook for the clustering stage, including preprocessing, cluster modeling, and evaluation.
 
 - [Klasifikasi]_Submission_Akhir_BMLP_Your_Name.ipynb
-	Notebook untuk tahap klasifikasi menggunakan data hasil clustering.
+	Notebook for the classification stage using clustering output data.
 
 - model_clustering.h5
-	Model clustering yang telah disimpan.
+	Saved clustering model.
 
 - PCA_model_clustering.h5
-	Artefak PCA untuk reduksi dimensi.
+	PCA artifact for dimensionality reduction.
 
 - decision_tree_model.h5
-	Model klasifikasi Decision Tree.
+	Decision Tree classification model.
 
 - explore_random_forest_classification.h5
-	Model Random Forest untuk eksplorasi performa.
+	Random Forest model for performance exploration.
 
 - tuning_classification.h5
-	Artefak model hasil proses tuning.
+	Model artifact from the tuning process.
 
-## Teknologi dan Library
+## Technologies and Libraries
 
-Library utama yang digunakan di notebook:
+Main libraries used in the notebooks:
 
 - pandas
 - numpy
@@ -64,41 +64,41 @@ Library utama yang digunakan di notebook:
 - yellowbrick
 - joblib
 
-## Cara Menjalankan
+## How to Run
 
-1. Clone repository ini.
-2. Pastikan Python 3.10+ sudah terpasang.
-3. Install dependency yang dibutuhkan notebook.
-4. Jalankan notebook clustering terlebih dahulu.
-5. Jalankan notebook klasifikasi setelah dataset hasil clustering siap.
+1. Clone this repository.
+2. Make sure Python 3.10+ is installed.
+3. Install the notebook dependencies.
+4. Run the clustering notebook first.
+5. Run the classification notebook after the clustering output dataset is ready.
 
-Contoh instalasi dependency:
+Example dependency installation:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn yellowbrick joblib jupyter
 ```
 
-Menjalankan Jupyter:
+Run Jupyter:
 
 ```bash
 jupyter notebook
 ```
 
-## Workflow Singkat
+## Workflow Summary
 
-1. Data loading dan data understanding.
-2. Data preprocessing dan encoding fitur kategorikal.
-3. Scaling dan pembentukan cluster.
-4. Evaluasi cluster (termasuk silhouette/elbow sesuai notebook).
-5. Penyimpanan artefak clustering dan PCA.
-6. Split data untuk klasifikasi.
-7. Training Decision Tree dan model alternatif.
-8. Evaluasi metrik klasifikasi dan tuning.
-9. Simpan model final.
+1. Data loading and data understanding.
+2. Data preprocessing and categorical feature encoding.
+3. Scaling and cluster formation.
+4. Cluster evaluation (including silhouette/elbow as defined in the notebooks).
+5. Save clustering and PCA artifacts.
+6. Split data for classification.
+7. Train Decision Tree and alternative models.
+8. Evaluate classification metrics and tuning results.
+9. Save final models.
 
-## Catatan
+## Notes
 
-- Ekstensi file model menggunakan .h5, namun proses penyimpanan di notebook menggunakan joblib.
-- Untuk reproduksibilitas, gunakan random_state yang sama seperti di notebook.
+- Model files use the .h5 extension, but the notebooks save models using joblib.
+- For reproducibility, use the same random_state values as in the notebooks.
 
 
